@@ -1,0 +1,19 @@
+<div class = "login_page">
+<div class="log-in">
+    <h2>LOG-IN</h2>
+    <form [formGroup]= "login">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" formControlName="e_mail">
+      </div>
+      <div class="form-group">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" formControlName="password">
+      </div>
+      <div id = "button">
+      <button type="button">Log-in</button>
+    </div>
+      <p>Don't have an account?<a routerLink="signup">Sign-up</a></p>
+    </form>
+  </div>
+</div>

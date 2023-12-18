@@ -1,0 +1,91 @@
+.heading {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Use 100% width to fill the available space */
+    height: 4.375rem;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* If you want to center the content horizontally within .heading */
+  .logo-container {
+    margin-right: auto; 
+  }
+  
+  .logo-container img{
+    margin-top: 0.938rem;
+      width: 50%; 
+      height: 45%;
+  }
+.link-container{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  margin-left: auto; 
+  gap: 1.5em; 
+  list-style: none; 
+}
+.link-container a{
+  position: relative; 
+  text-decoration: none;
+  color: #000;
+  margin-right: 5em; 
+font-family: Garet;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+&:after{
+  content: "";
+  position: absolute; 
+  width: 100%; 
+  transform: scaleX(0);
+  height: 2px; 
+  bottom: 1px; 
+  left: 0;
+  background-color: black; 
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out; 
+} 
+&:hover:after{
+  transform: scaleX(1); 
+  transform-origin: bottom left; 
+}
+}
+.svg-container{
+  display: flex; 
+  align-items: center;
+  justify-content: space-evenly;
+}
+.svg-container img{
+  width: 25%;
+  height: 25%; 
+margin-right: auto; 
+}
+
+.svg-container #bell{
+  width: 35px;
+  height: 35px; 
+  transition: filter 0.3s ease;
+  &:hover{
+    content: ""; 
+    animation: shake 1s forwards; 
+    cursor: pointer;
+  }
+}
+
+@keyframes shake{
+  10%{
+      transform: rotate(15deg); 
+  }
+  20%{
+      transform: rotate(-15deg); 
+  }
+  30%{
+      transform: rotate(15deg); 
+  }
+  50%{
+      transform: rotate(0deg); 
+  }
+  }

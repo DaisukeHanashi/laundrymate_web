@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Duru+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+.home_page{
+    position: relative; 
+    width: 100%; /* Use 100% width to fill the available space */
+    height: 62.5rem;
+    margin-top: 0.625rem; 
+    flex-shrink: 0;
+}
+.home_page #greeting{
+    color: #000;
+    margin-left: 2.188rem; 
+font-family: Garet;
+font-size: 1.875rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal; 
+}
+.announcement{
+    position: relative; 
+margin-left: 1.563rem;
+    width: 79.313rem;
+height: 6.375rem;
+flex-shrink: 0; 
+border-radius: 0.625rem;
+border: 0.188rem solid #000;
+background: rgba(217, 217, 217, 0.33); 
+}
+.announcement h3{
+    color: #000;
+font-family: Black Han Sans;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 1.563rem;
+margin-top: 0.813rem;
+}
+.main-tracker{
+    margin: 30px 25px 15px; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+.tracker{
+    width: 400px;
+height: 228px;
+flex-shrink: 0; 
+border-radius: 30px;
+}
+#new_order{
+    position: relative; 
+    background-color: rgb(3, 35, 48);
+    overflow: hidden; 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/basket.jpg) center/cover;
+        opacity: 0.25; /* Adjust the opacity as needed */
+      }
+}
+
+#new_order h3{
+    margin-top: 10px;
+    text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Garet;
+font-size: 27px;
+font-style: normal;
+font-weight: 850;
+line-height: normal; 
+background: linear-gradient(0deg, #46F4FF 75%, #46F4FF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: #46F4FF; 
+
+}
+#new_order .picture{
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-width: 400px; /* Set a maximum width for the image */
+    max-height: 400px;
+    text-align: center;
+    position: relative;
+    bottom: 1.2rem;
+}
+#new_payment{
+    position: relative;
+    background-color: rgb(6, 90, 48);
+    overflow: hidden; 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/dollar.jpg) center/cover;
+        opacity: 0.25; 
+      }
+}
+#new_payment h3{
+    margin-top: 10px;
+    text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Garet;
+font-size: 27px;
+font-style: normal;
+font-weight: 850;
+line-height: normal; 
+z-index: 2; 
+background: linear-gradient(180deg, #45F329 0%, #3CEE2D 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: #15ff00; 
+}
+
+#new_coming{
+    position: relative;
+    background-color: rgb(88, 78, 60); 
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/delivery.jpg) center/cover;
+        opacity: 0.3; /* Adjust the opacity as needed */
+      }
+}
+
+#new_coming h3{
+    margin-top: 10px;
+    color: #FDE510;
+text-align: center;
+font-family: Garet;
+font-size: 27px;
+font-style: normal;
+font-weight: 850;
+line-height: normal; 
+}
+.recent_activities {
+    display: flex;
+    justify-content: space-between; /* Align children elements to the start and end of the container */
+    align-items: center; /* Align children elements vertically in the center */
+}
+
+.recent_activities h3{
+    flex: 1;
+    text-align: center;
+    color: #000;
+font-family: Duru Sans;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.recent_activities a{
+    color: #000;
+font-family: Garet;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal; 
+margin-top: 2.5rem; 
+margin-right: 3rem;
+}

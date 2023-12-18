@@ -1,0 +1,102 @@
+.heading {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    height: 4.375rem;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .logo-container {
+    margin-right: auto; 
+  }
+  
+.logo-container img{
+  margin-top: 0.938rem;
+    width: 50%; 
+    height: 45%;
+}
+.link-container{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    margin-left: auto; 
+    gap: 1.5em; 
+    list-style: none; 
+  }
+  .link-container a{
+    position: relative; 
+    text-decoration: none;
+    color: #000;
+    margin-right: 5em; 
+  font-family: Garet;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  &:after{
+    content: "";
+    position: absolute; 
+    width: 100%; 
+    transform: scaleX(0);
+    height: 2px; 
+    bottom: 1px; 
+    left: 0;
+    background-color: black; 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; 
+  } 
+  &:hover:after{
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+  }
+  }
+  .buttons{
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  .buttons button{
+    border-radius: 30px; 
+    width: 6rem; 
+    height: 2.5rem; 
+    font-family: Garet;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 660;
+  }
+  .buttons #reg{
+    border: 0.05rem solid black;
+    background: rgba(72, 218, 250, 0.90);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #00487b;
+    cursor: pointer; 
+    &:hover{
+        content: ""; 
+     box-shadow: 0px 15px 20px rgb(15, 186, 216);
+     color: #000000; 
+     transform: translateY(-2px);
+    }
+    &:active{
+        transform: translateY(-1px); 
+    }
+  }
+  .buttons a{
+    text-decoration: none;
+  }
+  .buttons #log{
+    border: 0.05rem solid black;
+    background: #fff; 
+    color: #000;
+    cursor: pointer; 
+    &:hover{
+        content: ""; 
+     box-shadow: 0px 15px 20px rgb(0, 2, 2);
+     color: rgb(58, 196, 238); 
+     transform: translateY(-2px);
+    }
+    &:active{
+        transform: translateY(-1px); 
+    }
+  }
