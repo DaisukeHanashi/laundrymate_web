@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 export class LandheadingComponent {
 constructor(private router: Router){}
 public goToLog(){
-  this.router.navigate(['Login']);
+  this.router.navigate(['/Login']);
 }
 public goToSign(){
-  this.router.navigate(['signup']); 
+  this.router.navigate(['/signup']); 
 }
 }
