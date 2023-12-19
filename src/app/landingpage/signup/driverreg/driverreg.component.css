@@ -1,0 +1,140 @@
+.drivereg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../../../assets/lapse_road.jpg') center/cover; 
+    opacity: 0.85; 
+}
+.drivereg h2{
+    text-align: center;
+}
+.driverform{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    width: 80rem;
+    height: auto;
+    margin: 5.8rem;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #86ebfdc8;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.form-name {
+    position: relative; 
+    display: inline-flex;
+    margin-right: 0.5rem; /* Adjust the margin as needed */
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+.form-group {
+    position: relative; 
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-bottom: 1.4rem;
+  }
+  
+  .form-name label, .form-group label{
+    color: #060e81;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem; /* Adjust the spacing between label and input */
+  }
+.form-name input{
+    margin: 0.5rem;
+    width: 20rem;
+    height: 2.325rem;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    box-sizing: border-box;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+.form-group input, select{
+    margin: 0.5rem;
+    width: 25rem;
+    height: 2.325rem;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 1.2rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+#button button{
+    width: 7.5rem; 
+   height: 2.525rem; 
+   flex-shrink: 0; 
+    border-radius: 20px;
+    border: 1px solid #FEFEFE;
+    background: rgba(72, 218, 250, 0.90);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+     color: #363636;
+font-family: League Spartan;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+cursor: pointer;
+&:hover{
+    content: ""; 
+ box-shadow: 0px 15px 20px rgb(15, 186, 216);
+ color: #000000; 
+ transform: translateY(-2px);
+}
+&:active{
+    transform: translateY(-1px); 
+}
+}
+.driverform #button{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 2rem; 
+    color: #000000;
+}
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .custom-file-input label {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(72, 218, 250, 0.90);
+    color: #363636;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-file-input input {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  .upload-note {
+    margin-top: 10px; /* Adjust as needed */
+    color: #555; /* Set the color of the note */
+    font-size: 0.7rem; /* Set the font size of the note */
+  }
+  .selected-files {
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  

@@ -5,13 +5,13 @@
       </a>
     </div>
     <div class = "link-container">
-      <a href = " " id = "customer">CUSTOMER</a>
-      <a href = " " id = "provider" routerLink= "LoggedHome">PROVIDERS</a>
-      <a href = " " id = "partner">PARTNERS</a>
-      <a href = " " id = "faq">HELP</a>
+      <a  id = "customer">CUSTOMER</a>
+      <a id="provider" [routerLink]="['/Logged', 'LoggedHome']">PROVIDERS</a>
+      <a id = "partner">PARTNERS</a>
+      <a id = "faq">HELP</a>
     </div>
    <div class = "buttons">
-   <button id ="reg" (click) = "goToSign()">SIGN-UP</button>
-   <button id = "log" (click) = "goToLog()">LOG-IN</button> 
+   <button id ="reg"><a routerLink="signup">SIGN-UP</a></button>
+   <button id = "log"><a routerLink = "Login">LOG-IN</a></button> 
    </div>
   </div>

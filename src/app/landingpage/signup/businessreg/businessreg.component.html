@@ -1,0 +1,80 @@
+<div class="busreg">
+    <div class="busform">
+      <h2>BUSINESS REGISTRATION</h2>
+      <form [formGroup]="business_form">
+        <div class="form-name">
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" formControlName="lname" required>
+        </div>
+  
+        <div class="form-name">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" formControlName="fname" required>
+        </div>
+  
+        <div class="form-name">
+          <label for="mname">Middle Name:</label>
+          <input type="text" id="mname" formControlName="mname" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select formControlName="gender" id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="birthdate">Birth Date:</label>
+          <input type="date" formControlName="birthdate" id="birthdate" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">E-mail Address:</label>
+          <input type="email" formControlName="email" id="email" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" formControlName="phone" id="phone" pattern="^09\d{9}$" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="position">Position:</label>
+          <select formControlName="position" id="pos">
+            <option value="Staff">Staff</option>
+            <option value="Owner">Owner</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" formControlName="pass" id="pass" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="conf-password">Confirm Password:</label>
+          <input type="password" formControlName="conf_pass" id="conf_pass" required>
+        </div>
+        <div class="custom-file-input">
+            <label for="Document">Upload Requirement</label>
+            <input type="file" formControlName="document" id="docu" (change) = "onFileSelected($event)" multiple required>
+            <p class="upload-note">Please upload any government-issued IDs (and/or business permit, if Owner) for verification.</p>
+            <div *ngIf="selectedFiles.length > 0">
+              <p class="selected-files">Selected Files:</p>
+              <ul>
+                <li *ngFor="let file of selectedFiles">{{ file.name }}</li>
+              </ul>
+            </div>
+        </div>
+  
+        <div id="button">
+          <!-- Adjust the button type based on your requirements -->
+          <button type="button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

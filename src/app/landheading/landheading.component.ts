@@ -9,10 +9,13 @@ import { Router } from '@angular/router';
 })
 export class LandheadingComponent {
 constructor(private router: Router){}
-public goToLog(){
-  this.router.navigate(['/Login']);
+
+public goToLog() : void{
+  console.log('it works'); 
+  this.router.navigate(['/landing/Login']); // Include 'landing' for the parent route
 }
-public goToSign(){
-  this.router.navigate(['/signup']); 
+
+public goToSign() : void{
+  this.router.navigate(['/landing/signup']); // Include 'landing' for the parent route
 }
 }

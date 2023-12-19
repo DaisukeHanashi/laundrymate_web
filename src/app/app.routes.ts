@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
-import { LoggedHomeComponent } from './logged-home/logged-home.component';
+import { LoggedHomeComponent } from './loggedpage/logged-home/logged-home.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './landingpage/login/login.component';
 import { LandhomeComponent } from './landingpage/landhome/landhome.component';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './landingpage/signup/signup.component';
+import { BusinessregComponent as BusinessRegistration} from './landingpage/signup/businessreg/businessreg.component';
+import { DriverregComponent } from './landingpage/signup/driverreg/driverreg.component';
+import { LoggedpageComponent } from './loggedpage/loggedpage.component';
 
 export const routes: Routes = [
   {
@@ -28,18 +31,56 @@ export const routes: Routes = [
           },
           {
             path: 'Login',
-            component: LoginComponent
+            component: LoginComponent,
+            children:[
+              {
+                path: 'sign',
+                redirectTo: '/landing/signup',
+                pathMatch: 'full'
+              }
+            ]
           },
           {
             path: 'signup',
-            component: SignupComponent
+            component: SignupComponent,
+            children: [
+              {
+                path: 'bus',
+                redirectTo: '/landing/busreg',
+                pathMatch: 'full'
+              },
+              {
+                path: 'driver',
+                redirectTo: '/landing/drivereg',
+                pathMatch: 'full'
+              }
+            ]
+          },
+          {
+            path: 'busreg',
+            component: BusinessRegistration
+          },
+          {
+            path: 'drivereg',
+            component: DriverregComponent
           }
         ]
    
      },
      {
-      path: 'LoggedHome',
-      component: LoggedHomeComponent
+      path: 'Logged',
+      component: LoggedpageComponent,
+      children: [
+        {
+         path: '',
+         redirectTo: 'LoggedHome',
+         pathMatch : 'full'
+        },
+        {
+        path: 'LoggedHome',
+        component: LoggedHomeComponent
+        }
+      ]
     }
     ]
   }
